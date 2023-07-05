@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mutlu_bayramlar4/constants.dart';
+import 'package:mutlu_bayramlar4/result_page.dart';
 import 'package:mutlu_bayramlar4/user_data.dart';
 
 import 'icon_button.dart';
@@ -8,6 +9,8 @@ import 'my_container.dart';
 import 'my_rotate_widget.dart';
 
 class InputPage extends StatefulWidget {
+  static const routName = '/routeInputPage';
+
   @override
   _InputPageState createState() => _InputPageState();
 }
@@ -195,7 +198,7 @@ class _InputPageState extends State<InputPage> {
                                 topRight: Radius.circular(20))),
                         backgroundColor: Colors.deepPurple),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/routeResultPage',
+                      Navigator.pushNamed(context, ResultPage.routName,
                           arguments: UserData(
                               boy: boy,
                               kilo: kilo,
